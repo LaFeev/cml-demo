@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Train model
         run: |
-          dvc pull data
+          dvc pull
           pip install -r requirements.txt
           dvc repro
       - name: Create CML report
