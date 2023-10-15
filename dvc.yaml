@@ -1,12 +1,12 @@
 stages:
-  mystage:
+  train:
     cmd: python train.py
     deps:
-    - data
+    - data/numbers
+    - data/test
     - train.py
-    metrics:
+    outs:
     - metrics.txt:
         cache: false
-    plots:
     - confusion_matrix.png:
         cache: false
