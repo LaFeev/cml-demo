@@ -13,7 +13,7 @@ jobs:
         run: apt-get install libc6
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.9'
       - uses: iterative/setup-cml@v1
       - uses: iterative/setup-dvc@v1
       - name: Train model
