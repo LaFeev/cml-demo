@@ -5,7 +5,7 @@ stages:
     - data
     - train.py
     metrics:
-    - metrics.txt:
+    - metrics.json:
         cache: false
     plots:
     - confusion_matrix.png:

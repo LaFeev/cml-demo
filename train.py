@@ -39,20 +39,15 @@ clf = LogisticRegression(max_iter = 1000)
 clf.fit(X_train_s, y_train)
 
 # score the model
+acc = clf.score(X_test_s, y_test)
 y_pred = clf.predict(X_test_s)
 precision = precision_score(y_test, y_pred, average="micro")
 recall = recall_score(y_test, y_pred, average="micro")
 print(precision, recall)
 
 # output the metrics for the report markdown
-metrics = f"""
-Precision: {precision:8.4f}
-Recall:    {recall:8.4f}
-
-![Confusion Matrix](confusion_matrix.png)
-"""
-with open("metrics.txt", "w") as outfile:
-    outfile.write(metrics)
+with open("metrics.json", "w") as outfile:
+    json.dump({"accuracy": acc, "precision": precision, "recall": recall}, outfile)
 
 # output the confusion matrix
 cm = ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
