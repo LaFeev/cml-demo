@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  mystage:
+    cmd: python train.py
+    deps:
+    - path: data
+      hash: md5
+      md5: 02260fca362e8fae5b003cf435cef3a4.dir
+      size: 76822655
+      nfiles: 15
+    - path: train.py
+      hash: md5
+      md5: 6daa5fd66ccd0e7fae5718c89c69be7e
+      size: 1840
+    outs:
+    - path: confusion_matrix.png
+      hash: md5
+      md5: d5ca9a904e2ae9b41201cd5c6e0778ce
+      size: 26331
+      isexec: true
+    - path: metrics.json
+      hash: md5
+      md5: 47ce3f9a6830a71be50c855f8ee6d55b
+      size: 95
+      isexec: true
