@@ -20,12 +20,13 @@ for f in train_files:
     train = pd.concat([train, pd.read_csv(f)], ignore_index=True)
 for f in test_files:
     test = pd.concat([test, pd.read_csv(f)], ignore_index=True)
+print(f"train size: {train.shape}\ntest size: {test.shape}")
 
 # create feature/label objects
 X_train = train.loc[:,train.columns != "label"]
-y_train = train.label
+y_train = train["label"]
 X_test = test.loc[:,test.columns != "label"]
-y_test = test.label
+y_test = test["label"]
 
 # scale the feature data for use in logistic regression
 scaler = MinMaxScaler()
