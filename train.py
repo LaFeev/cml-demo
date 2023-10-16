@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 # read in data
 # get all csv files present in "numbers" dir
 path = os.getcwd() 
-train_files = glob.glob("cml_trial/data/numbers/*.csv")
-test_files = glob.glob("cml_trial/data/test/*.csv")
+train_files = glob.glob(path + "/data/numbers/*.csv")
+test_files = glob.glob(path + "/data/test/*.csv")
 
 # read in csv files, adding to "train" and "test" DFs
 train = pd.DataFrame()
