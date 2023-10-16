@@ -4,7 +4,7 @@ Simulating a production machine vision model that is classifying handwritten dig
 - time based (refresh the dataset and update the model weekly/monthly/etc)
 - scope creep, e.g. client wants coverage of additional case(s)
 <br>
-Upon a push of new data, the Github Actions workflow is initiated automatically, pulling the new data from cloud storage, training a new model, outputing metrics/plots, and then comparing the new model to the live model.  The comparison report is added automatically to a comment within the generated pull request.  This was simulated by adding new data (the digit "6") to the dataset, where the original model was trained only on digits 0-5.  Review the [Pull Requests](https://github.com/LaFeev/cml-demo/pulls) to see the generated report.
+Upon a push of new data, the Github Actions workflow is initiated automatically, pulling the new data from cloud storage, training a new model, outputing metrics/plots, and then comparing the new model to the live model.  The comparison report is added automatically to a comment within the generated pull request.  This was simulated by adding new data (the digit "6") to the dataset, where the original model was trained only on digits 0-5.  Review the [commit comment](https://github.com/LaFeev/cml-demo/commit/5ed97757efcb88a116ace4cbc7a41d7b7f3241db) to see the generated report.
   
 #### Benefits
 - Cloud storage platform agnostic - including distributed file systems
