@@ -2,3 +2,4 @@
     remote = dvc_store
 ['remote "dvc_store"']
     url = gdrive://1PvM3h3dYweLB5evcASFdcSfGJPcYQ9Zo
+    gdrive_use_service_account = true
