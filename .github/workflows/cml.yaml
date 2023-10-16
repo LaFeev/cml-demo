@@ -28,6 +28,6 @@ jobs:
           # Post CML report as a comment in GitHub
           # Compare metrics to main
           test $(git branch --show-current) == main || git fetch --depth=1 origin main:main 
-          dvc metrics diff --show-md main >> report.md
+          dvc metrics diff --md main >> report.md
           echo '![](./confusion_matrix.png "Confusion Matrix")' >> report.md
           cml comment create report.md
